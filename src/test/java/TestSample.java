@@ -28,6 +28,7 @@ public class TestSample {
     @Test
     public void test() {
         FirefoxDriver driver = new FirefoxDriver();
+        System.setProperty("webdriver.firefox.bin", "/usr/bin/firefox");
         driver.get("https://www.hotpepper.jp/");
         driver.findElement(By.linkText("北海道")).click();
         assertEquals("person.walkがおかしいよ！", "person.walkがおかしいよ！");
