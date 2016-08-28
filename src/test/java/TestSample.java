@@ -27,6 +27,7 @@ public class TestSample {
 
     @Test
     public void test() {
+        System.setProperty("webdriver.chrome.driver", "/opt/chromedriver");
         ChromeDriver driver = new ChromeDriver();
         driver.get("https://www.hotpepper.jp/");
         driver.findElement(By.linkText("北海道")).click();
