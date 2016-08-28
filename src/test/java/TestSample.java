@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static org.junit.Assert.assertEquals;
 
@@ -27,8 +28,7 @@ public class TestSample {
 
     @Test
     public void test() {
-        System.setProperty("webdriver.chrome.driver", "/opt/chromedriver");
-        ChromeDriver driver = new ChromeDriver();
+        FirefoxDriver driver = new FirefoxDriver();
         driver.get("https://www.hotpepper.jp/");
         driver.findElement(By.linkText("北海道")).click();
         assertEquals("person.walkがおかしいよ！", "person.walkがおかしいよ！");
